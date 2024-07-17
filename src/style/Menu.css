@@ -1,0 +1,88 @@
+/* menu style */
+.game-menu{
+    color: #545454; 
+    max-width: 500px;
+    margin: 0 auto;
+}
+.game-menu .player{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+    width: 100%;
+}
+.game-menu .player:not(:last-child){
+    margin-bottom: 30px;
+}
+.game-menu .player label{
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+@media screen and (max-width: 425px) {
+    .game-menu .player label{
+        font-size: 16px;
+    }
+}
+.game-menu input{
+    width: 100%;
+    background-color: #545454;
+    border: 2px solid #404040;
+    padding: 15px 0px 15px 15px;
+    border-radius: 10px;
+    color: #14bdac;
+    transition: all 0.4s ease;
+}
+.game-menu input::placeholder{
+    color: #14bdac;
+    font-size: 14px;
+    transition: all 0.4s ease;
+}
+.game-menu input:focus{
+    outline: none;
+    background-color: #14bdac;
+    color: #545454;
+}
+.game-menu input:focus::placeholder{
+    color: #545454;
+}
+
+.game-menu .start{
+    display: inline-block;
+    padding: 15px 60px;
+    cursor: pointer;
+    color: #14bdac;
+    background-color: #545454;
+    border: 3px solid transparent;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 6px;
+    border-radius: 15px;
+    transition: all 0.8s ease;
+}
+@media screen and (min-width: 768px) {
+    .game-menu .start:hover{
+        background-color: #14bdac;
+        color: #545454;
+        border-color: #545454;
+    }
+}
+/* menu style error*/
+.game-menu.error .player{
+    color: red;
+  }
+  
+  .game-menu.error::before{
+    content: "Enter the name of the players";
+    color: red;
+    font-size: 16px;
+  }
+  
+  .game-menu.error .start{
+    color: red;
+    border-color: red;
+  }
+  
+  .game-menu.error input::placeholder{
+    color: red;
+  }
